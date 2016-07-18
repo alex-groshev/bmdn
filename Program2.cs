@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Jobs;
@@ -29,36 +28,26 @@ namespace Benchmark2
 
         private readonly object _o = new object();
 
-        [Params(1)]
         public decimal Money;
 
+        [Setup]
+        public void SetupData()
+        {
+            Money = 0;
+        }
+
         [Benchmark(Baseline = true)]
-        public decimal Option1()
+        public decimal NoLock()
         {
             return ++Money;
         }
 
         [Benchmark]
-        public decimal Option2()
+        public decimal Lock()
         {
             lock (_o)
             {
-                ++Money;
-            }
-            return Money;
-        }
-
-        [Benchmark]
-        public decimal Option3()
-        {
-            Monitor.Enter(_o);
-            try
-            {
                 return ++Money;
-            }
-            finally
-            {
-                Monitor.Exit(_o);
             }
         }
     }
