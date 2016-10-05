@@ -4,18 +4,9 @@ using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Jobs;
-using BenchmarkDotNet.Running;
 
-namespace Benchmark1
+namespace BenchmarkDotNetSandbox.Tests
 {
-    class Program1
-    {
-        static void Main(string[] args)
-        {
-            var summary = BenchmarkRunner.Run<ClassUnderTest>();
-        }
-    }
-
     struct Foo
     {
         public int X { get; set; }
@@ -23,7 +14,7 @@ namespace Benchmark1
     }
 
     [Config(typeof(Config))]
-    public class ClassUnderTest
+    public class ForLoopVsLinq
     {
         private class Config : ManualConfig
         {

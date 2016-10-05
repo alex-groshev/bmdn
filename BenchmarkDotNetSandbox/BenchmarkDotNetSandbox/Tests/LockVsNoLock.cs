@@ -2,20 +2,11 @@
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Jobs;
-using BenchmarkDotNet.Running;
 
-namespace Benchmark2
+namespace BenchmarkDotNetSandbox.Tests
 {
-    class Program2
-    {
-        static void Main(string[] args)
-        {
-            var summary = BenchmarkRunner.Run<ClassUnderTest>();
-        }
-    }
-
     [Config(typeof(Config))]
-    public class ClassUnderTest
+    public class LockVsNoLock
     {
         private class Config : ManualConfig
         {
