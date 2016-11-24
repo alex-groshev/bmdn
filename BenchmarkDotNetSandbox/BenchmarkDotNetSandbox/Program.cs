@@ -7,7 +7,7 @@ namespace BenchmarkDotNetSandbox
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<StringReverse>();
+            var summary = BenchmarkRunner.Run<ListVsQueue>();
         }
     }
 }
