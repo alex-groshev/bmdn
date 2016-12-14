@@ -165,6 +165,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Tests\ForLoopVsLinq.cs" />
+    <Compile Include="Tests\IsPermutation.cs" />
     <Compile Include="Tests\ListVsQueue.cs" />
     <Compile Include="Tests\LockVsNoLock.cs" />
     <Compile Include="Tests\MissingElementInPermutation.cs" />
