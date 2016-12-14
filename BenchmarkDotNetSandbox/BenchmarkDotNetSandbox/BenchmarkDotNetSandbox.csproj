@@ -167,6 +167,7 @@
     <Compile Include="Tests\ForLoopVsLinq.cs" />
     <Compile Include="Tests\ListVsQueue.cs" />
     <Compile Include="Tests\LockVsNoLock.cs" />
+    <Compile Include="Tests\MissingElementInPermutation.cs" />
     <Compile Include="Tests\StringReverse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
