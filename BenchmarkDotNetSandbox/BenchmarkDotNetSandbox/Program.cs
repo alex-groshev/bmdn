@@ -7,7 +7,7 @@ namespace BenchmarkDotNetSandbox
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<IsPermutation>();
+            var summary = BenchmarkRunner.Run<NullOrEmpty>();
         }
     }
 }
