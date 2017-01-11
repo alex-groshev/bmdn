@@ -39,5 +39,19 @@ namespace BenchmarkDotNetSandbox.Tests
         {
             return _list == null || !_list.Any();
         }
+
+        [Benchmark]
+        public bool NullCountExtension()
+        {
+            return _list.IsNullOrEmpty();
+        }
+    }
+
+    public static class ListExtensions
+    {
+        public static bool IsNullOrEmpty<T>(this List<T> list)
+        {
+            return list == null || list.Count == 0;
+        }
     }
 }
