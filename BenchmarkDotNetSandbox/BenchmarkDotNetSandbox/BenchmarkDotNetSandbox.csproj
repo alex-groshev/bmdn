@@ -164,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="Tests\AggregateVsSum.cs" />
     <Compile Include="Tests\ForLoopVsLinq.cs" />
     <Compile Include="Tests\IsPermutation.cs" />
     <Compile Include="Tests\ListVsQueue.cs" />
