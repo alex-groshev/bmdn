@@ -21,7 +21,7 @@ namespace BenchmarkDotNetSandbox.Tests
 
         public decimal Money;
 
-        [Setup]
+        [GlobalSetup]
         public void SetupData()
         {
             Money = 0;

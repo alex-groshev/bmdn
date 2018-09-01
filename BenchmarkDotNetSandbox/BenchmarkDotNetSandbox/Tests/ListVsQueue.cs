@@ -26,7 +26,7 @@ namespace BenchmarkDotNetSandbox.Tests
         private readonly Queue<int> _queue = new Queue<int>(10);
         private readonly List<int> _list = new List<int>(10);
 
-        [Setup]
+        [GlobalSetup]
         public void Setup()
         {
             _queue.Enqueue(2);

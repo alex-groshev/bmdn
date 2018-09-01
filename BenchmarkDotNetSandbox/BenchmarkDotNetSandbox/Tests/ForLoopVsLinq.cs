@@ -27,7 +27,7 @@ namespace BenchmarkDotNetSandbox.Tests
 
         List<Foo> _foos;
 
-        [Setup]
+        [GlobalSetup]
         public void SetupData()
         {
             _foos = new List<Foo>

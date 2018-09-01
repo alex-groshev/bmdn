@@ -7,7 +7,7 @@ namespace BenchmarkDotNetSandbox
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<AggregateVsSum>();
+            var summary = BenchmarkRunner.Run<ArrayCopyVsForLoop>();
         }
     }
 }
